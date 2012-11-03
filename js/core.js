@@ -17,24 +17,45 @@ var Cats = {};
   Cats.environment = 'web';
 
   var Game = function () {
-    var i;
+    var i,
+        item,
+        index,
+        windowHeight,
+        windowWidth,
+        self = this;
 
-    this.numberOfItems = 1;
-    this.itemSpeed = 1;
+    this.numberOfItems = 10;
+    this.itemSpeed = 2000;
     this.itemsClicked = 0;
     this.items = [];
-    this.itemTemplate = {
-      color: '#fff',
-      currentPos: [0, 0],
-      targetPos: [100, 100],
-      finalPos: [500,0]
-    };
+    this.itemWidth = 20;
+    this.itemHeight = 20;
     this.container = $('#Playfield');
 
     //generate items
     for (i = 0; i < this.numberOfItems; i++) {
-
+      item = $('<div id="item_' + i + '"></div>');
+      this.items.push(item);
+      this.move(item);
     }
-  }
+
+    this.container.append(this.items);
+  };
+
+  Game.prototype.move = function (item) {
+    var self = this;
+
+    var windowHeight = $(window).height() - this.itemHeight;
+    var windowWidth = $(window).width() - this.itemWidth;
+    item.css({
+      top: Math.floor(Math.random() * windowHeight),
+      left: Math.floor(Math.random() * windowWidth)
+    }).show();
+
+    setTimeout(function(){
+      self.move(item);
+    }, Math.floor(Math.random() * this.itemSpeed));
+  };
+
   Cats.Game = Game;
 })();

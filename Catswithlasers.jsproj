@@ -47,12 +47,15 @@
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetPlatformVersion>8.0</TargetPlatformVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <PackageCertificateKeyFile>Catswithus_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>Catswithlasers_StoreKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>7BB6D904E790112BDB3A8AEC199B982E26A53183</PackageCertificateThumbprint>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="Catswithlasers_TemporaryKey.pfx" />
+    <None Include="Catswithlasers_StoreKey.pfx" />
     <Content Include="default.html" />
     <Content Include="images\logo.png" />
     <Content Include="images\smalllogo.png" />
@@ -63,7 +66,7 @@
     <Content Include="css\default.css" />
     <Content Include="js\currentEnvironment.js" />
     <Content Include="js\lib\jquery-1.8.2.min.js" />
-    <None Include="Catswithus_TemporaryKey.pfx" />
+    <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />

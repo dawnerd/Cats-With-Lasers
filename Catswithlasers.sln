@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Windows 8
-Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "Catswithus", "Catswithus.jsproj", "{F3AA8E77-165F-4D23-A3D6-7F12A8149502}"
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "Catswithlasers", "Catswithlasers.jsproj", "{F3AA8E77-165F-4D23-A3D6-7F12A8149502}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
